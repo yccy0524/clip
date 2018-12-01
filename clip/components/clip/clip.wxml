@@ -1,0 +1,27 @@
+<!--components/clip/clip.wxml-->
+<view class="clip">
+  <view class="top">
+    <view class="top-1" style="width: calc((100vw - {{clipW}}rpx) / 2);"></view>
+    <view class="top-2" style="width:{{clipW}}rpx;"></view>
+    <view class="top-3" style="width: calc((100vw - {{clipW}}rpx) / 2);"></view>
+  </view>
+  <view class="main">
+    <view class='line-2' style="width: calc((100vw - {{clipW}}rpx) / 2);height:{{clipH}}rpx"></view>
+    <movable-area class="outer" style="width:{{clipW}}rpx;height:{{clipH}}rpx" scale-area>
+      <movable-view class='inner' direction="all" bindchange="move" bindscale="scale" scale="{{true}}" scale-min="{{1}}" style="width:{{cropperW}}rpx;height:{{cropperH}}rpx" x="{{x}}" y="{{y}}">
+        <image src='{{imgSrc}}'></image>
+      </movable-view>
+    </movable-area>
+    <view class='line-3' style="width: calc((100vw - {{clipW}}rpx) / 2);height:{{clipH}}rpx"></view>
+  </view>
+  <view class="bottom" style="height:calc(100vh - 300rpx - {{clipH}}rpx)">
+    <view class="bottom-1" style="width: calc((100vw - {{clipW}}rpx) / 2);"></view>
+    <view class="bottom-2" style="width:{{clipW}}rpx;"></view>
+    <view class="bottom-3" style="width: calc((100vw - {{clipW}}rpx) / 2);"></view>
+  </view>
+  <canvas canvas-id="clip" style="position:absolute; width:100%;height:100%;border: 1px solid red;left: -9999px; top: -9999px;"></canvas>
+  <view class="btns">
+    <view catchtap="cancel">取消</view>
+    <view catchtap="save">完成</view>
+  </view>
+</view>

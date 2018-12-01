@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "clip": "../../components/clip/clip"
+  }
+}

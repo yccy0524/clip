@@ -1,0 +1,17 @@
+/**index.wxss**/
+.container.index{
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 1)
+}
+button{
+  width: 690rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  color: #fff;
+  font-size: 30rpx;
+  text-align: center;
+  border-radius: 10rpx;
+  background: green;
+  margin-top: 400rpx;
+}

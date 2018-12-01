@@ -1,0 +1,5 @@
+<!--index.wxml-->
+<view class="container index">
+  <button catchtap='choose' wx:if="{{!tempImg}}">选择图片</button>
+  <clip wx:else bindcancel="cancel" imgSrc="{{tempImg}}" clipW="{{500}}" clipH="{{500}}"></clip>
+</view>
