@@ -38,6 +38,12 @@ App({
       title: str,
     })
   },
+  showToast(str,icon){
+    wx.showToast({
+      title: str,
+      icon: icon || 'none'
+    })
+  },
   globalData: {
     userInfo: null
   }
